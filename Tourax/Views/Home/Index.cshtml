@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="searchBobTab" data-toggle="tab" href="#formSearchBob" role="tab" aria-controls="formSearchBob" aria-selected="true">Recherche de bobine</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" id="capaciteBobTab" data-toggle="tab" href="#formCapaciteBob" role="tab" aria-controls="formCapaciteBob" aria-selected="false">Capacité bobine</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" id="simuParDimBobTab" data-toggle="tab" href="#formSimuParDimBob" role="tab" aria-controls="formSimuParDimBob" aria-selected="false">Par dimensions bobine</a>
+    </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="formSearchBob" role="tabpanel" aria-labelledby="searchBobTab">
+        <partial name="Form/_FormRechercheBobPartial" />
+    </div>
+    <div class="tab-pane fade" id="formCapaciteBob" role="tabpanel" aria-labelledby="capaciteBobTab">
+        <partial name="Form/_FormCapaciteBobPartial" />
+    </div>
+    <div class="tab-pane fade" id="formSimuParDimBob" role="tabpanel" aria-labelledby="simuParDimBobTab">
+        <partial name="Form/_FormDimensionBobPartial" />
+    </div>
+</div>
+
+<div id="resultSimulation"></div>

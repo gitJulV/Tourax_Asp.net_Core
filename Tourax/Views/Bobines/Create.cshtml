@@ -1,0 +1,96 @@
+﻿@model Tourax.Models.BobineModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Ajout bobine</h1>
+<hr />
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="ImageName" class="control-label"></label>
+        <input asp-for="ImageName" class="form-control" />
+        <span asp-validation-for="ImageName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Reference" class="control-label">Référence</label>
+        <input asp-for="Reference" class="form-control" required/>
+        <span asp-validation-for="Reference" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Nom" class="control-label"></label>
+        <input asp-for="Nom" class="form-control" required/>
+        <span asp-validation-for="Nom" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IdMatiere" class="control-label">Matière</label>
+        <select asp-for="IdMatiere" class="form-control" asp-items="ViewBag.IdMatiere" required></select>
+    </div>
+    <div class="row my-5">
+        <div class="col-lg-6 col-md-12 schema">
+            <div class="form-group">
+                <input asp-for="LargeurExt" class="form-control" id="largeurExt" placeholder="Largeur ext" type="number" min="1" required/>
+                <span asp-validation-for="LargeurExt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="LargeurInt" class="form-control" id="largeurInt" placeholder="Largeur int" type="number" min="1" required/>
+                <span asp-validation-for="LargeurInt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="DiametreExt" class="form-control" id="diametreExt" placeholder="Diamètre ext" type="number" min="1" required/>
+                <span asp-validation-for="DiametreExt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="DiametreInt" class="form-control" id="diametreInt" placeholder="Diamètre int" type="number" min="1" required/>
+                <span asp-validation-for="DiametreInt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Moyeu" class="form-control" id="moyeu" placeholder="Moyeu" type="number" min="1" required/>
+                <span asp-validation-for="Moyeu" class="text-danger"></span>
+            </div>
+            <img src="~/img/bobineSchema.svg" alt="Schéma bobine dimension" />
+        </div>
+        <div class="col-lg-6 col-md-12 pl-lg-5">
+            <div class="form-group row">
+                <div class="col-6 pl-lg-3">
+                    <label>Technique d'enroulement</label>
+                    <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" asp-for="Trancanage" id="techTranca" />
+                        <label class="custom-control-label" for="techTranca">Trancanage</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" asp-for="Enroulement" id="techEnroule" />
+                        <label class="custom-control-label" for="techEnroule">Enroulement sur lui-même</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label>Consigne</label>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="PoidsAVide" class="control-label">Poids à vide</label>
+                <input asp-for="PoidsAVide" class="form-control" type="number" min="1" required />
+                <span asp-validation-for="PoidsAVide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PoidsMaxAutorise" class="control-label">Poids maximum autorisé</label>
+                <input asp-for="PoidsMaxAutorise" class="form-control" type="number" min="1" required />
+                <span asp-validation-for="PoidsMaxAutorise" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <a asp-action="Index">Retour</a>
+        <input type="submit" value="Créer" class="btn btn-primary ml-2" />
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,109 @@
+﻿/******************************************** POPUP GESTION MATIERE **************************************************/
+#gestionMatiere {
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgb(128, 128, 128);
+}
+
+#closeListMatiere {
+    position: absolute;
+    top: -4%;
+    right: -4%;
+    /* transform: translate(-50%,-50%); */
+    border: none;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    outline-style: none;
+}
+
+    #closeListMatiere:hover {
+        background-color: rgb(211, 210, 210);
+        transition: 0.5s;
+    }
+
+/***************************************************** SCHEMA BOBINE *****************************************************/
+.schema {
+    position: relative;
+}
+
+    .schema img {
+        height: 18rem;
+        width: 100%;
+    }
+
+.schemaDim {
+    text-align: center;
+    padding: 6px;
+    background-color: #f8f8f8 !important;
+}
+
+#diametreInt {
+    width: 24%;
+    position: absolute;
+    top: 56%;
+    left: 17%;
+}
+
+#nbFieldError0 {
+    position: absolute;
+    top: 68%;
+    left: 17%;
+}
+
+#diametreExt {
+    width: 25%;
+    position: absolute;
+    top: 33%;
+    left: 3%;
+}
+
+#nbFieldError1 {
+    position: absolute;
+    top: 45%;
+    left: 3%;
+}
+
+#largeurExt {
+    width: 23%;
+    position: absolute;
+    top: 0%;
+    left: 47%;
+}
+
+#nbFieldError2 {
+    position: absolute;
+    top: 12%;
+    left: 47%;
+}
+
+#largeurInt {
+    width: 23%;
+    position: absolute;
+    top: 90%;
+    left: 47%;
+}
+
+#nbFieldError3 {
+    position: absolute;
+    top: 102%;
+    left: 47%;
+}
+
+#moyeu {
+    width: 17%;
+    position: absolute;
+    top: 47%;
+    left: 80%;
+}
+
+#nbFieldError4 {
+    position: absolute;
+    top: 59%;
+    left: 80%;
+}

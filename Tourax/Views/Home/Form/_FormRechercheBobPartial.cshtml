@@ -1,0 +1,64 @@
+﻿<div class="form-group row my-2">
+    <label class="col-lg-2 col-md-4 col-sm-6">Type de câble : </label>
+    <div class="col-lg-1 col-md-2 col-sm-12">
+        <div class="custom-control custom-radio">
+            <input type="radio" id="radioRond" name="formeCable" class="custom-control-input" />
+            <label class="custom-control-label">Rond</label>
+        </div>
+    </div>
+    <div class="col-lg-1 col-md-2 col-sm-12">
+        <div class="custom-control custom-radio">
+            <input type="radio" id="radioPlat" name="formeCable" class="custom-control-input" />
+            <label class="custom-control-label">Plat</label>
+        </div>
+    </div>
+</div>
+<div id="inputDiametre" class="form-group">
+    <label>Diamètre(en mm)</label>
+    <input type="number" id="diametreCableFormRecherche" class="form-control" max="35"/>
+    <div class="invalid-feedback" id="nbFieldError0"></div>
+</div>
+<div id="inputDimensions" class="hidden form-group">
+    <label>Largeur(en mm)</label>
+    <input type="number" id="largeurCableFormRecherche" class="form-control"/>
+    <label>Epaisseur(en mm)</label>
+    <input type="number" id="epaisseurCableFormRecherche" class="form-control"/>
+</div>
+<div class="form-group">
+    <label>Technique d'enroulement</label>
+    <select name="enroulement" id="enroulementCableFormRecherche" class="form-control" onchange="peuplerSelectCoeffRemplissage();">
+        <option value="trancanageCableFormRecherche" selected>Trancanage</option>
+        <option id="enroulementSurLuiCableFormRecherche" value="enroulementSurLui" class="hidden">Enroulement sur lui-même</option>
+    </select>
+</div>
+<div class="form-group">
+    <label>Coefficient de remplissage</label>
+    <select name="coeff" id="coeffCableFormRecherche" class="form-control">
+        <option value="0.60">0.60</option>
+        <option value="0.65">0.65</option>
+        <option value="0.70" selected>0.70</option>
+        <option value="0.75">0.75</option>
+        <option value="0.80">0.80</option>
+        <option value="0.85">0.85</option>
+    </select>
+</div>
+<div class="form-group">
+    <label>Poids du câble(en g/m)</label>
+    <input type="number" id="poidsCableFormRecherche" class="form-control"/>
+    <div class="invalid-feedback" id="nbFieldError1"></div>
+</div>
+<div class="form-group">
+    <label>Longueur du câble(en m)</label>
+    <input type="number" id="longueurCableFormRecherche" class="form-control" />
+    <div class="invalid-feedback" id="nbFieldError2"></div>
+</div>
+<div class="form-group">
+    <div class="custom-control custom-checkbox">
+        <input id="nonSecableFormRecherche" class="custom-control-input" />
+        <label class="custom-control-label">Non Sécable</label>
+    </div>
+</div>
+
+<button type="submit" class="btn btn-primary">
+    Valider
+</button>

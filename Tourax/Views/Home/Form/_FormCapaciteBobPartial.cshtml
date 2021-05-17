@@ -1,0 +1,47 @@
+﻿<div class="form-group">
+    <label for="refBobChoix">Référence de la bobine</label>
+    <input list="refBobList" id="refBobFormCapacite" class="form-control"/>
+    <datalist id="refBobList">
+    </datalist>
+</div>
+<div class="form-group row my-lg-2">
+    <label class="col-lg-2 col-md-4 col-sm-6">Type de câble</label>
+    <div class="col-lg-1 col-md-2 col-sm-12">
+        <div class="custom-control custom-radio">
+            <input type="radio" id="radioRondFormCapacite" name="formeCable" class="custom-control-input" />
+            <label class="custom-control-label">Rond</label>
+        </div>
+    </div>
+    <div class="col-lg-1 col-md-2 col-sm-12">
+        <div class="custom-control custom-radio">
+            <input type="radio" id="radioPlatFormCapacite" name="formeCable" class="custom-control-input" />
+            <label class="custom-control-label">Plat</label>
+        </div>
+    </div>
+</div>
+<div id="inputDiametre" class="form-group">
+    <label>Diamètre(en mm)</label>
+    <input type="number" id="diametreCableFormCapacite" class="form-control" max="35" />
+</div>
+<div id="inputDimensions" class="hidden form-group">
+    <label>Largeur(en mm)</label>
+    <input type="number" id="largeurCableFormCapacite" class="form-control"/>
+    <label>Epaisseur(en mm)</label>
+    <input type="number" id="epaisseurCableFormCapacite" class="form-control"/>
+</div>
+<div class="form-group">
+    <label>Coefficient de remplissage</label>
+    <select name="coeff" id="coeffFormCapacite" class="form-control">
+        <option value="0.6">0.6</option>
+        <option value="0.65">0.65</option>
+        <option value="0.7" selected>0.7</option>
+        <option value="0.75">0.75</option>
+        <option value="0.8">0.8</option>
+        <option value="0.85">0.85</option>
+    </select>
+</div>
+<div class="form-group">
+    <label>Poids du câble(en g/m)</label>
+    <input type="number" id="poidsCableFormCapacite" class="form-control" />
+</div>
+<button type="submit" class="btn btn-primary">Valider</button>

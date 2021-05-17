@@ -1,0 +1,71 @@
+﻿@model Tourax.Models.BobineModel
+
+<div class="modal-body">
+    <dl class="row">
+        <dt class="col-sm-4">Référence</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Reference)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Trancanage)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Trancanage)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Enroulement)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Enroulement)
+        </dd>
+        <dt class="col-sm-4">Consigné</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Consigne)
+        </dd>
+        <dt class="col-sm-4">Largeur exterieur</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.LargeurExt)
+        </dd>
+        <dt class="col-sm-4">Largeur intérieur</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.LargeurInt)
+        </dd>
+        <dt class="col-sm-4">Diamètre exterieur</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.DiametreExt)
+        </dd>
+        <dt class="col-sm-4">Diamètre intérieur</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.DiametreInt)
+        </dd>
+        <dt class="col-sm-4">Moyeu</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Moyeu)
+        </dd>
+        <dt class="col-sm-4">Poids à vide</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.PoidsAVide)
+        </dd>
+        <dt class="col-sm-4">Poids maximum autorisé</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.PoidsMaxAutorise)
+        </dd>
+        <dt class="col-sm-4">Matière</dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.LibelleMatiere)
+        </dd>
+    </dl>
+</div>
+<div class="modal-footer">
+    <form asp-action="Delete">
+        <button type="button" data-dismiss="modal" class="btn btn-link">Retour</button>
+        <input type="hidden" asp-for="IdBobine" />
+        <input type="submit" value="Supprimer" class="btn btn-danger ml-2" />
+    </form>
+</div>
