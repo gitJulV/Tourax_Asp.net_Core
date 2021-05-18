@@ -19,7 +19,6 @@ namespace Tourax.Controllers
     [Authorize]
     public class BobinesController : Controller
     {
-        //private readonly TouraxDbContext _context;
         private readonly ITouraxRepository _touraxRepository;
         private readonly IMapper _mapper;
 

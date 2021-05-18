@@ -1,4 +1,4 @@
-﻿<div class="form-group row my-2">
+﻿@*<div class="form-group row my-2">
     <label class="col-lg-2 col-md-4 col-sm-6">Type de câble : </label>
     <div class="col-lg-1 col-md-2 col-sm-12">
         <div class="custom-control custom-radio">
@@ -12,18 +12,18 @@
             <label class="custom-control-label">Plat</label>
         </div>
     </div>
-</div>
+</div>*@
 <div id="inputDiametre" class="form-group">
     <label>Diamètre(en mm)</label>
     <input type="number" id="diametreCableFormRecherche" class="form-control" max="35"/>
     <div class="invalid-feedback" id="nbFieldError0"></div>
 </div>
-<div id="inputDimensions" class="hidden form-group">
+@*<div id="inputDimensions" class="hidden form-group">
     <label>Largeur(en mm)</label>
     <input type="number" id="largeurCableFormRecherche" class="form-control"/>
     <label>Epaisseur(en mm)</label>
     <input type="number" id="epaisseurCableFormRecherche" class="form-control"/>
-</div>
+</div>*@
 <div class="form-group">
     <label>Technique d'enroulement</label>
     <select name="enroulement" id="enroulementCableFormRecherche" class="form-control" onchange="peuplerSelectCoeffRemplissage();">

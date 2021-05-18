@@ -16,14 +16,41 @@
 
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="formSearchBob" role="tabpanel" aria-labelledby="searchBobTab">
-        <partial name="Form/_FormRechercheBobPartial" />
+        <div class="formSimulator">
+            <partial name="Form/_FormRechercheBobPartial" />
+        </div>
+        <div id="resultSimulationRecherche">
+            <table id="tableResultBob" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Référence</th>
+                        <th>Nom</th>
+                        <th>Longueur max</th>
+                        <th>Nb couches</th>
+                        <th>Nb spires</th>
+                        <th>Poids brute</th>
+                        <th>Poids net</th>
+                        <th>Nb bobines</th>
+                        @*<th>Stock disponible</th>
+                        <th>Prix unitaire</th>*@
+                        <th>Port de charge</th>
+                        <th>Récapitulatif</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </div>
     <div class="tab-pane fade" id="formCapaciteBob" role="tabpanel" aria-labelledby="capaciteBobTab">
-        <partial name="Form/_FormCapaciteBobPartial" />
+        <div class="formSimulator">
+            <partial name="Form/_FormCapaciteBobPartial" />
+        </div>
+        <div id="resultSimulationCapacite"></div>
     </div>
     <div class="tab-pane fade" id="formSimuParDimBob" role="tabpanel" aria-labelledby="simuParDimBobTab">
-        <partial name="Form/_FormDimensionBobPartial" />
+        <div class="formSimulator">
+            <partial name="Form/_FormDimensionBobPartial" />
+        </div>
+        <div id="resultSimulationDimensionBob"></div>
     </div>
 </div>
 
-<div id="resultSimulation"></div>
