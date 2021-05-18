@@ -1,4 +1,12 @@
-﻿/******************************************** POPUP GESTION MATIERE **************************************************/
+﻿.formSimulator {
+    border: solid 1px #dee2e6;
+    border-radius: 0.25rem;
+    border-top: none;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+}
+
+/******************************************** POPUP GESTION MATIERE **************************************************/
 #gestionMatiere {
     position: absolute;
     padding: 10px;
@@ -43,11 +51,39 @@
     background-color: #f8f8f8 !important;
 }
 
-#diametreInt {
+#diametreInt, .diametreIntSchema {
     width: 24%;
     position: absolute;
     top: 56%;
     left: 17%;
+}
+
+#diametreExt, .diametreExtSchema {
+    width: 25%;
+    position: absolute;
+    top: 33%;
+    left: 3%;
+}
+
+#largeurExt, .largeurExtSchema {
+    width: 23%;
+    position: absolute;
+    top: 0%;
+    left: 47%;
+}
+
+#largeurInt, .largeurIntSchema {
+    width: 23%;
+    position: absolute;
+    top: 90%;
+    left: 47%;
+}
+
+#moyeu, .moyeuSchema {
+    width: 17%;
+    position: absolute;
+    top: 47%;
+    left: 80%;
 }
 
 #nbFieldError0 {
@@ -56,24 +92,10 @@
     left: 17%;
 }
 
-#diametreExt {
-    width: 25%;
-    position: absolute;
-    top: 33%;
-    left: 3%;
-}
-
 #nbFieldError1 {
     position: absolute;
     top: 45%;
     left: 3%;
-}
-
-#largeurExt {
-    width: 23%;
-    position: absolute;
-    top: 0%;
-    left: 47%;
 }
 
 #nbFieldError2 {
@@ -82,24 +104,10 @@
     left: 47%;
 }
 
-#largeurInt {
-    width: 23%;
-    position: absolute;
-    top: 90%;
-    left: 47%;
-}
-
 #nbFieldError3 {
     position: absolute;
     top: 102%;
     left: 47%;
-}
-
-#moyeu {
-    width: 17%;
-    position: absolute;
-    top: 47%;
-    left: 80%;
 }
 
 #nbFieldError4 {

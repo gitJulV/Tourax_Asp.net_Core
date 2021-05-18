@@ -1,0 +1,11 @@
+﻿@model Tourax.Models.SimulatorModel
+
+<div class="card border-primary">
+    <div class="card-header">Résultats: </div>
+    <div class="card-body">
+        <p class="card-text"><b>Longueur max:</b> @Model.LongTotal(0.7) m</p>
+        <p class="card-text"><b>Longueur max théorique:</b> @Model.LongTotal() m</p>
+        <p class="card-text"><b>Poids cable:</b> @Model.PoidsNet() kg</p>
+        <p class="card-text"><b>Poids total:</b> @Model.PoidsBrut() kg</p>
+    </div>
+</div>

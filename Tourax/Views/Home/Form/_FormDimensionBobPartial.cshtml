@@ -2,19 +2,19 @@
     <div class="col-lg-6 col-md-12 schema">
         <div>
             <div class="form-group">
-                <input class="form-control" id="largeurExt" placeholder="Largeur ext" type="number" min="1" required />
+                <input class="form-control largeurExtSchema" id="largeurExtFormDimension" placeholder="Largeur ext" type="number" min="1" required />
             </div>
             <div class="form-group">
-                <input class="form-control" id="largeurInt" placeholder="Largeur int" type="number" min="1" required />
+                <input class="form-control largeurIntSchema" id="largeurIntFormDimension" placeholder="Largeur int" type="number" min="1" required />
             </div>
             <div class="form-group">
-                <input class="form-control" id="diametreExt" placeholder="Diamètre ext" type="number" min="1" required />
+                <input class="form-control diametreExtSchema" id="diametreExtFormDimension" placeholder="Diamètre ext" type="number" min="1" required />
             </div>
             <div class="form-group">
-                <input class="form-control" id="diametreInt" placeholder="Diamètre int" type="number" min="1" required />
+                <input class="form-control diametreIntSchema" id="diametreIntFormDimension" placeholder="Diamètre int" type="number" min="1" required />
             </div>
             <div class="form-group">
-                <input class="form-control" id="moyeu" placeholder="Moyeu" type="number" min="1" required />
+                <input class="form-control moyeuSchema" id="moyeuFormDimension" placeholder="Moyeu" type="number" min="1" required />
             </div>
             <img src="~/img/bobineSchema.svg" alt="Schéma bobine dimension" />
         </div>
@@ -38,7 +38,7 @@
         </div>
     </div>
 </div>
-<div class="form-group row my-lg-2">
+@*<div class="form-group row my-lg-2">
     <label class="col-lg-2 col-md-4 col-sm-6">Type de câble</label>
     <div class="col-lg-1 col-md-2 col-sm-12">
         <div class="custom-control custom-radio">
@@ -52,17 +52,17 @@
             <label class="custom-control-label">Plat</label>
         </div>
     </div>
-</div>
+</div>*@
 <div id="inputDiametre" class="form-group">
     <label>Diamètre(en mm)</label>
     <input type="number" id="diametreCableFormDimension" class="form-control" max="35" />
 </div>
-<div id="inputDimensions" class="hidden form-group">
+@*<div id="inputDimensions" class="hidden form-group">
     <label>Largeur(en mm)</label>
     <input type="number" id="largeurCableFormDimension" class="form-control" />
     <label>Epaisseur(en mm)</label>
     <input type="number" id="epaisseurCableFormDimension" class="form-control" />
-</div>
+</div>*@
 <div class="form-group">
     <label>Coefficient de remplissage</label>
     <select name="CoeffRemplissage" id="coeff" class="form-control">
@@ -78,6 +78,4 @@
     <label>Poids du câble(en g/m)</label>
     <input type="number" id="poidsCableFormDimension" class="form-control" />
 </div>
-<button type="submit" class="btn btn-primary">
-    Valider
-</button>
+<button class="btn btn-primary" onclick="showResultDimensionBobine()">Valider</button>
