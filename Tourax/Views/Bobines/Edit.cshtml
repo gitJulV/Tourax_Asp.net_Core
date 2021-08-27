@@ -12,12 +12,12 @@
     <input type="hidden" asp-for="IdBobine" />
     <div class="form-group">
         <label asp-for="Reference" class="control-label"></label>
-        <input asp-for="Reference" type="text" class="form-control textField"/>
+        <input asp-for="Reference" type="text" class="form-control textField" />
         <span asp-validation-for="Reference" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Nom" class="control-label"></label>
-        <input asp-for="Nom" type="text" class="form-control textField"/>
+        <input asp-for="Nom" type="text" class="form-control textField" />
         <span asp-validation-for="Nom" class="text-danger"></span>
     </div>
     <div class="form-group">
@@ -28,7 +28,7 @@
     <div class="row my-5">
         <div class="col-lg-6 col-md-12 schema">
             <div class="form-group">
-                <input asp-for="LargeurExt" type="number" class="form-control" id="largeurExt" placeholder="Largeur ext"/>
+                <input asp-for="LargeurExt" type="number" class="form-control" id="largeurExt" placeholder="Largeur ext" />
                 <span asp-validation-for="LargeurExt" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -72,16 +72,17 @@
             </div>
             <div class="form-group">
                 <label asp-for="PoidsAVide" class="control-label"></label>
-                <input asp-for="PoidsAVide" type="number" class="form-control"/>
+                <input asp-for="PoidsAVide" type="number" class="form-control" />
                 <span asp-validation-for="PoidsAVide" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="PoidsMaxAutorise" class="control-label"></label>
-                <input asp-for="PoidsMaxAutorise" type="number" class="form-control"/>
+                <input asp-for="PoidsMaxAutorise" type="number" class="form-control" />
                 <span asp-validation-for="PoidsMaxAutorise" class="text-danger"></span>
             </div>
         </div>
     </div>
+    @Html.AntiForgeryToken()
     <div class="form-group">
         <a asp-action="Index">Retour</a>
         <input type="submit" value="Modifier" class="btn btn-primary ml-2" />
