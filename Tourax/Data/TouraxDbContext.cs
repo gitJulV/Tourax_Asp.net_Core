@@ -9,8 +9,7 @@ namespace Tourax.Data
 {
     public class TouraxDbContext : IdentityDbContext
     {
-        public TouraxDbContext(DbContextOptions<TouraxDbContext> options)
-            : base(options)
+        public TouraxDbContext(DbContextOptions<TouraxDbContext> options): base(options)
         {
         }
 

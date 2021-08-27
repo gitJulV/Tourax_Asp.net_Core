@@ -11,40 +11,40 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="IdBobine" />
     <div class="form-group">
-        <label asp-for="Reference" class="control-label">Référence</label>
-        <input asp-for="Reference" class="form-control textField" required/>
+        <label asp-for="Reference" class="control-label"></label>
+        <input asp-for="Reference" type="text" class="form-control textField"/>
         <span asp-validation-for="Reference" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Nom" class="control-label"></label>
-        <input asp-for="Nom" class="form-control textField" required/>
+        <input asp-for="Nom" type="text" class="form-control textField"/>
         <span asp-validation-for="Nom" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="IdMatiere" class="control-label">Matière</label>
-        <select asp-for="IdMatiere" class="form-control" asp-items="ViewBag.IdMatiere" required></select>
+        <label asp-for="IdMatiere" class="control-label"></label>
+        <select asp-for="IdMatiere" class="form-control" asp-items="ViewBag.IdMatiere"></select>
         <span asp-validation-for="IdMatiere" class="text-danger"></span>
     </div>
     <div class="row my-5">
         <div class="col-lg-6 col-md-12 schema">
             <div class="form-group">
-                <input asp-for="LargeurExt" class="form-control" id="largeurExt" placeholder="Largeur ext" type="number" min="1" required/>
+                <input asp-for="LargeurExt" type="number" class="form-control" id="largeurExt" placeholder="Largeur ext"/>
                 <span asp-validation-for="LargeurExt" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input asp-for="LargeurInt" class="form-control" id="largeurInt" placeholder="Largeur int" type="number" min="1" required/>
+                <input asp-for="LargeurInt" type="number" class="form-control" id="largeurInt" placeholder="Largeur int" />
                 <span asp-validation-for="LargeurInt" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input asp-for="DiametreExt" class="form-control" id="diametreExt" placeholder="Diamètre ext" type="number" min="1" required/>
+                <input asp-for="DiametreExt" type="number" class="form-control" id="diametreExt" placeholder="Diamètre ext" />
                 <span asp-validation-for="DiametreExt" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input asp-for="DiametreInt" class="form-control" id="diametreInt" placeholder="Diamètre int" type="number" min="1" required/>
+                <input asp-for="DiametreInt" type="number" class="form-control" id="diametreInt" placeholder="Diamètre int" />
                 <span asp-validation-for="DiametreInt" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input asp-for="Moyeu" class="form-control" id="moyeu" placeholder="Moyeu" type="number" min="1" required/>
+                <input asp-for="Moyeu" type="number" class="form-control" id="moyeu" placeholder="Moyeu" />
                 <span asp-validation-for="Moyeu" class="text-danger"></span>
             </div>
             <img src="~/img/bobineSchema.svg" alt="Schéma bobine dimension" />
@@ -71,13 +71,13 @@
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="PoidsAVide" class="control-label">Poids à vide</label>
-                <input asp-for="PoidsAVide" class="form-control" type="number" min="1" required/>
+                <label asp-for="PoidsAVide" class="control-label"></label>
+                <input asp-for="PoidsAVide" type="number" class="form-control"/>
                 <span asp-validation-for="PoidsAVide" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PoidsMaxAutorise" class="control-label">Poids maximum autorisé</label>
-                <input asp-for="PoidsMaxAutorise" class="form-control" type="number" min="1" required/>
+                <label asp-for="PoidsMaxAutorise" class="control-label"></label>
+                <input asp-for="PoidsMaxAutorise" type="number" class="form-control"/>
                 <span asp-validation-for="PoidsMaxAutorise" class="text-danger"></span>
             </div>
         </div>

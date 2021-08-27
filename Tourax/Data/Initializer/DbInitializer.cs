@@ -13,40 +13,20 @@ namespace Tourax.Data.Initializer
             context.Database.EnsureCreated();
 
             if (context.Matieres.Any())
-            {
                 return;
-            }
 
             var matieres = new List<MatiereEntity>()
             {
-                new MatiereEntity
-                {
-                    IdMatiere=1,
-                    LibelleMatiere="Plastique"
-                },
-                new MatiereEntity
-                {
-                    IdMatiere=2,
-                    LibelleMatiere="Bois"
-                },
-                new MatiereEntity
-                {
-                    IdMatiere=3,
-                    LibelleMatiere="Métal"
-                }
+                new MatiereEntity{ IdMatiere=1, LibelleMatiere="Plastique" },
+                new MatiereEntity{ IdMatiere=2, LibelleMatiere="Bois" },
+                new MatiereEntity{ IdMatiere=3, LibelleMatiere="Métal"}
             };
 
-            matieres.ForEach(m =>
-            {
-                context.Matieres.Add(m);
-            });
+            matieres.ForEach(m =>{ context.Matieres.Add(m); });
             context.SaveChanges();
 
-
             if (context.Bobines.Any())
-            {
                 return;
-            }
 
             var bobines = new List<BobineEntity>()
             {
@@ -103,14 +83,8 @@ namespace Tourax.Data.Initializer
                 }
             };
 
-            bobines.ForEach(b =>
-            {
-                context.Bobines.Add(b);
-            });
+            bobines.ForEach(b => { context.Bobines.Add(b); });
             context.SaveChanges();
-
-
-
 
         }
     }

@@ -17,12 +17,13 @@ namespace Tourax.Repositories
         {
             _touaxDbContext = touraxDbContext;
         }
+
         #region Bobine
         public IQueryable<BobineEntity> GetBobines()
         {
             return _touaxDbContext.Bobines.Include(b => b.Matiere);
         }
-
+        
         public IQueryable<BobineEntity> GetBobineById(int idBobine)
         {
             return _touaxDbContext.Bobines.Where(b => b.IdBobine == idBobine).Include(b => b.Matiere);

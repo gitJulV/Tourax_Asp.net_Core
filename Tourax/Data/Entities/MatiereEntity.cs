@@ -7,7 +7,6 @@ namespace Tourax.Data.Entities
     public class MatiereEntity
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdMatiere { get; set; }
 
         [MaxLength(50)]
